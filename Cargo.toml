@@ -1,0 +1,14 @@
+[package]
+name = "deterministic-hash"
+version = "1.0.0"
+edition = "2018"
+authors = ["Wouter Geraedts <git@woutergeraedts.nl>"]
+description = "Create deterministic hashes regardless of architecture"
+readme = "README.md"
+repository = "https://github.com/Wassasin/deterministic-hash"
+license = "MIT"
+keywords = ["hash", "no-std", "deterministic"]
+categories = ["cryptography", "no-std"]
+
+[dev-dependencies]
+crc = { version = "1.8", default-features = false }
