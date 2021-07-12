@@ -12,6 +12,7 @@
 //! let hasher = deterministic_hash::DeterministicHasher::new(hasher);
 //! ```
 
+#![no_std]
 use core::hash::Hasher;
 
 /// Wrapper around any hasher to make it deterministic.
@@ -41,7 +42,7 @@ impl<T: Hasher> DeterministicHasher<T> {
 }
 
 /// Implementation of hasher that forces all bytes written to be platform agnostic.
-impl<T: Hasher> std::hash::Hasher for DeterministicHasher<T> {
+impl<T: Hasher> core::hash::Hasher for DeterministicHasher<T> {
     fn finish(&self) -> u64 {
         self.0.finish()
     }
