@@ -9,7 +9,7 @@
 //! From any hasher make it deterministic by inserting `DeterministicHasher` in between:
 //! ```
 //! let hasher = crc::crc32::Digest::new(crc::crc32::KOOPMAN);
-//! let hasher = DeterministicHasher::new(hasher);
+//! let hasher = deterministic_hash::DeterministicHasher::new(hasher);
 //! ```
 
 use core::hash::Hasher;
