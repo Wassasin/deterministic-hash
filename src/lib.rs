@@ -25,6 +25,7 @@ use core::hash::Hasher;
 /// (0x1337 as usize).hash(&mut hasher);
 /// assert_eq!(hasher.as_inner().sum32(), 2482448842);
 /// ```
+#[derive(Default, Clone, Debug)]
 pub struct DeterministicHasher<T: Hasher>(T);
 
 impl<T: Hasher> DeterministicHasher<T> {
